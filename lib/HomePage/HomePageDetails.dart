@@ -9,21 +9,39 @@ class HomePageDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text("Welcome!"),
-        ),
-        backgroundColor: Colors.amber,
-      ),
-      body: Container(
-        child: Column(
-          children: [
-            MyCard(getBuild: WordTestPage(), cardName: "Word Test"),
-            MyCard(getBuild: WordTestPage(), cardName: "My Dictionary"),
-            MyCard(getBuild: AddNewWordPage(), cardName: "Add New Word")
-          ],
-        ),
-      ),
-    );
+        body: Stack(
+      children: [
+        Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Color(0xffa18cd1),
+              Color(0xfffbc2eb),
+            ])),
+            child: const Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Text(
+                "Welcome!",
+                style: TextStyle(
+                    fontSize: 45,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            )),
+        Padding(
+          padding: const EdgeInsets.only(top: 100.0, left: 20.0, right: 20.0),
+          child: Container(
+            child: const Column(
+              children: [
+                MyCard(getBuild: WordTestPage(), cardName: "Word Test"),
+                MyCard(getBuild: WordTestPage(), cardName: "My Dictionary"),
+                MyCard(getBuild: AddNewWordPage(), cardName: "Add New Word")
+              ],
+            ),
+          ),
+        )
+      ],
+    ));
   }
 }

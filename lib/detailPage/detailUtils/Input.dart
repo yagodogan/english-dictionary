@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomInput extends StatelessWidget {
   final String hintText;
-  const CustomInput({super.key, required this.hintText});
+
+  const CustomInput({
+    super.key,
+    required this.hintText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +14,6 @@ class CustomInput extends StatelessWidget {
         margin: EdgeInsets.only(bottom: 10.0),
         child: TextField(
           autofocus: true,
-          onChanged: (String value) {},
           decoration:
               InputDecoration(hintText: hintText, border: OutlineInputBorder()),
         ));

@@ -19,14 +19,17 @@ class _MyCardState extends State<MyCard> {
         );
       },
       child: Card(
-        color: Colors.amber[900],
+        color: Colors.white,
         child: Row(
           children: [
             Padding(
               padding: const EdgeInsets.all(40.0),
               child: Text(
                 widget.cardName,
-                style: const TextStyle(color: Colors.white, fontSize: 30),
+                style: const TextStyle(
+                    color: Color(0xffa18cd1),
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold),
               ),
             ),
           ],

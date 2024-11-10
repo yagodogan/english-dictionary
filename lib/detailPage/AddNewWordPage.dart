@@ -1,9 +1,14 @@
-import 'package:engword/detailPage/Detail%20Utils/Input.dart';
+import 'package:engword/detailPage/detailUtils/Input.dart';
 import 'package:flutter/material.dart';
 
-class AddNewWordPage extends StatelessWidget {
+class AddNewWordPage extends StatefulWidget {
   const AddNewWordPage({super.key});
 
+  @override
+  State<AddNewWordPage> createState() => _AddNewWordPageState();
+}
+
+class _AddNewWordPageState extends State<AddNewWordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
